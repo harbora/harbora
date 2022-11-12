@@ -43,22 +43,25 @@ In some cases, you need to add some comments in hex. You can add parentheses aft
 ab:cD7c(comment 1):6c
 ```
 
-## URD Form
+## HURD
+
+HURD is Harbora Uniform Resources Descriptor.
 
 All resource in harbora have two form, `text` form and `binary` form
 
 ### Text
 
-`URD` text form is the subset of [URL (RFC1738)](https://www.rfc-editor.org/rfc/rfc1738).
+`HURD` text form is the subset of [URL (RFC1738)](https://www.rfc-editor.org/rfc/rfc1738).
 
-Text form of `URD` following these rule.
+Text form of `HURD` following these rule.
 
 ```shell
-protocol://id/path?key1=value1&key2=value2#hash
+protocol://user@id:path?key1=value1&key2=value2#hash
 ```
 
 - protocol: Protocol can compact web2 world.
 - id: An ID or address, node address, group address or others.
+- user: Resources access user.
 - path: Path to resource. [URL (RFC1738)](https://www.rfc-editor.org/rfc/rfc1738)
 - key=value: KV map. same as [URL (RFC1738)](https://www.rfc-editor.org/rfc/rfc1738).
 - hash: Can be any value
