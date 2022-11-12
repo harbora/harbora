@@ -68,5 +68,13 @@ protocol://user@id:path?key1=value1&key2=value2#hash
 
 ### Binary
 
+`HURD` also have binary format. This format can parse in stream.
+
+```
+8a(mgc) XX(ver) XX(cat)
+XX(usl) XX..[usl]..XX(usr)
+XX(idl) XX..[idl]..XX(id)
+```
+
 ## Type
 
