@@ -2,5 +2,5 @@
 
 ## Documents
 
-1. [RFC1](rfc1.md): Uniform Resource Descriptor For Harbora
+1. [HRC](hrc1.md): Uniform Resource Descriptor For Harbora
 
