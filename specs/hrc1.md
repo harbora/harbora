@@ -83,3 +83,34 @@ u24, u5, u7, i10
 
 `i` means signed, `u` means unsigned, `number` means witdh.
 
+### Bool
+
+`true` or `false`.
+
+### String
+
+A variable length string.
+
+### FixedBytes
+
+Fixed bytes express as `BytesN`. `N` is the length of bytes.
+
+``` shell
+Bytes1 Bytes32
+```
+
+
+### Variable Length Bytes
+
+Any length bytes is `Bytes`.
+
+Restricted length bytes is:
+
+``` shell
+# Length is 1 to 5
+Bytes[1..5]
+
+# Length is 1, 4, or 8
+Bytes[1,4,8]
+```
+
