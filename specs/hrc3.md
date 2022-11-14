@@ -64,7 +64,13 @@ In order to reduce the number of times the private key has to be recorded, a der
 In order to store different types of public and private keys, it is necessary to use enumerations to express them.
 
 ``` rust
-enum PublicKey {
+
+enum Scheme {
+    Schnorr<Point>,
+    BLS<Point>,
+}
+
+enum Point {
     Curve25519(..),
     Secp256k1(..),
     Bls12_381(..),
@@ -77,4 +83,4 @@ enum PublicKey {
 XX(ty) XX..XX
 ```
 
-First byte is type.
+First byte is type. First 4 bit is scheme, last 4 bit is curve.
