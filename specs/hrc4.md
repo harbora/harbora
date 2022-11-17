@@ -18,24 +18,11 @@ and can interact with the outside world instead of the node
 
 Owner is a plain user.
 
-Each user is 2-n threshold signature. `n` is a all control device.
+## User
 
-### BLS
+### User ID
 
-If use BLS, owner have:
-
-- SecretKey
-- Code
-- PublicKey
-- AggrPublicKey
-- User Address
-
-Same as schnorr, generate BLS using the following rule:
-
-1. Same as schnorr's 1 ~ 4
-2. Compute threshold public key.
-
-## User ID
+### Domain Name of user
 
 ## Permission
 
