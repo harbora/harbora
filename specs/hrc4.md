@@ -7,22 +7,11 @@ created:
 replacement:
 ---
 
-# User and Owner
-
-## Owner
-
-Every node in the network has an owner determined by a public-private keypair.
-
-The owner is the absolute controller of the node, has all the capabilities of the node,
-and can interact with the outside world instead of the node
-
-Owner is a plain user.
-
-## User
+# User
 
 Each user is a digital signature public key. It means user use signature to verify itself.
 
-### User ID
+## User ID
 
 User ID is not a public key, is a hash of public key.
 
@@ -34,15 +23,11 @@ $UserId=H_1(H_2(PublicKey))$.
 
 User ID is a hash of public key, so we can use User ID to verify Public Ksy.
 
-### Domain Name of user
+## Domain Name of user
 
 When user change public key, the User ID also changed. But sometimes we need
-a static name of user id. We can use Domain Name or ENS like service to do this..
+a static name of user id. We can use Domain Name or ENS like service to do this.
 
-### User number
+## Basic requirement
 
-## Permission
-
-## Auth
-
-
+User only
