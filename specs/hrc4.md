@@ -28,6 +28,19 @@ User ID is a hash of public key, so we can use User ID to verify Public Ksy.
 When user change public key, the User ID also changed. But sometimes we need
 a static name of user id. We can use Domain Name or ENS like service to do this.
 
-## Basic requirement
+## Basic and Advanced
 
-User only
+It should be noted that the user only requires one public key. How to construct this public key depends on different schemes.
+
+### Single private key
+
+The most basic way is to directly use a private key to construct a public key.
+
+The disadvantage of this scheme is that the user must be responsible for the management of the private key.
+
+### Threshold signature for multi-device
+
+
+
+
+
