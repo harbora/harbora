@@ -30,7 +30,9 @@ Public key is a point, must create by multiply of point and scalar number.
 $P=sG$
 
 $P$ is public key, a point on a curve.
+
 $s$ is private key, a scalar number on finate field. It also can be a shared key.
+
 $G$ is a generate point.
 
 ## Domain Name of user
@@ -50,6 +52,11 @@ The disadvantage of this scheme is that the user must be responsible for the man
 
 ### Threshold signature for multi-device
 
+Users can configure multiple devices as management devices.
+In this case a threshold signature of 1/n is used.
+
+It is also possible to co-manage with the device using a managed server.
+In this case a threshold signature of t+1/n is used. t is number of server.
 
 
 
