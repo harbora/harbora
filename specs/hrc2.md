@@ -65,20 +65,20 @@ Protocol on binary form have three segment, `mgc`, `ver`, and `cat`.
 And this on text form also have three part:
 
 ``` shell
-hrb 1 g
+hrp1g
 ```
 
-- `hrb` is magic, means hrb protocol.
+- `hrp` is magic, means harbora resource protocol.
 - `1` is version, means version number
 - `g` is category.
 
 ## Category for Version 1
 
 - Node
-  - Text: hrb1n://
+  - Text: hrp1n://
   - Binary: 0xb08a0101
 - Group
-  - Text: hrb1g://
+  - Text: hrp1g://
   - Binary: 0xb08a0102
 
 
