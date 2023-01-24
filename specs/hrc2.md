@@ -36,12 +36,21 @@ protocol://user@id:path?data
 `HURD` also have binary format. This format can parse in stream.
 
 ```
-b08a(mgc) XX(ver) XX(cat) XX(usl) XXXX(ptl) XXXX(dtl)
-XX..[usl]..XX(usr) XX..[idl]..XX(id) XX..[ptl]..XX(pth) XX..[dtl]..XX(dta)
+b08a(mgc)
+XX(ver)
+XX(cat)
+XX(usl)
+XXXX(ptl)
+XXXX(dtl)
+XX..[usl]..XX(usr)
+XX..[idl]..XX(id)
+XX..[ptl]..XX(pth)
+XX..[dtl]..XX(dta)
 ```
 - mgc: Magic number, always `b08a`
 - ver: Version of HURD
 - cat: Category of protocol
+- idl: based on cat
 - usl: Length of user.
     - usr: User id.
 - id: ID or address
