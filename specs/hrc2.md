@@ -72,4 +72,14 @@ hrb 1 g
 - `1` is version, means version number
 - `g` is category.
 
+## Category for Version 1
+
+- Node
+  - Text: hrb1n://
+  - Binary: 0xb08a0101
+- Group
+  - Text: hrb1g://
+  - Binary: 0xb08a0102
+
+
 
