@@ -9,9 +9,16 @@ replacement:
 
 # Node
 
-## Node ID
+## Node ID and Public key
 
-### Public Node ID
+### Node Public key and Node ID
+
+When node first startup, will create a keypair.
+The use 
+
+### Certified Public key
+
+
 
 ### Private Node ID
 
