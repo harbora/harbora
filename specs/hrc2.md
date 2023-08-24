@@ -22,12 +22,13 @@ All resource in harbora have two form, `text` form and `binary` form
 Text form of `HURD` following these rule.
 
 ```shell
-protocol://user@id:path?data
+protocol://user:password@domain/path?data
 ```
 
 - protocol: Protocol can compact web2 world.
-- id: An ID or address, node address, group address or others.
+- domain: An ID or address, node address, group address or others.
 - user: Resources access user.
+- password: Password for user
 - path: Path to resource.
 - data: Any data pass to resource.
 
@@ -36,16 +37,25 @@ protocol://user@id:path?data
 `HURD` also have binary format. This format can parse in stream.
 
 ```
-b08a(mgc)
-XX(ver)
-XX(cat)
-XX(usl)
-XXXX(ptl)
-XXXX(dtl)
-XX..[usl]..XX(usr)
-XX..[idl]..XX(id)
-XX..[ptl]..XX(pth)
-XX..[dtl]..XX(dta)
+struct HurdHeader {
+  ver: u8,
+  user_len: u8,
+  pass_len: u8,
+  domain_len: u8,
+  path_seg: u8,
+  args_seg: u8,
+  hash_len: u8,
+  cat: varint64,
+}
+
+struct HurdBody {
+  user: Bytes,
+  pass: Bytes,
+  domain: Bytes,
+  path: [Bytes; 0 .. 255],
+  args: [(Bytes, Bytes), 0 .. 255]
+  hash: Bytes,
+}
 ```
 - mgc: Magic number, always `b08a`
 - ver: Version of HURD
